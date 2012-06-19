@@ -28,7 +28,7 @@ public:
     
     void setRotationSpeed(double rotationSpeed);
     void setThrust(double thrust);
-    void applyGravity(double gravity, vector2d origin);
+    void applyGravity(double gravity, vector2d origin, double radius);
     void applyThrust();
     void removeThrust();
     
@@ -40,6 +40,7 @@ public:
     vector2 getScreenLocation();
     
     void draw(SDL_Surface *screen, vector2 center, double zoomLevel);
+    rectangle updateRectFromScreenLocation(vector2 screenLocation);
     void drawSpeedBars(SDL_Surface *screen);
 };
 

@@ -31,12 +31,13 @@ Game::Game(SDL_Surface *surface, vector2d startCoordinate) : _playerShip(startCo
     _mapSize.x = 100000;
     _mapSize.y = 100000;
     
+    _frame = 0;
     _finished = false;
 }
 
 void Game::drawScene()
 {
-    SDL_FillRect(SDL_GetVideoSurface(), NULL, 0);
+//    SDL_FillRect(SDL_GetVideoSurface(), NULL, 0);
     
     vector2 center;
     
@@ -46,6 +47,32 @@ void Game::drawScene()
     vector<Drawable*> bodies = _map->getObjectsInMapRect(getMapRect());
     
     vector<Drawable*>::iterator i;
+    
+    for (i = bodies.begin(); i != bodies.end(); i++)
+    {
+        rectangle updateRect = (*i)->updateRectFromScreenLocation(screenLocationFromMapLocation((*i)->getMapLocation()));
+        if ((updateRect.topLeft.x < updateRect.bottomRight.x) &&
+            (updateRect.topLeft.y < updateRect.bottomRight.y))
+        {
+            SDL_Rect sdlUpdateRect = {(Sint16)(updateRect.topLeft.x), (Sint16)(updateRect.topLeft.y),
+                (Uint16)(updateRect.bottomRight.x - updateRect.topLeft.x),
+                (Uint16)(updateRect.bottomRight.y - updateRect.topLeft.y)};
+            SDL_FillRect(SDL_GetVideoSurface(), &sdlUpdateRect, 0);
+            Planet *thePlanet = dynamic_cast<Planet*>(*i);
+            if (thePlanet != NULL)
+            {
+                _playerShip.applyGravity(GRAVITY, ((Planet *)*i)->getMapLocation(), ((Planet *)*i)->getRadius());
+            }
+//            drawRect(_screen, updateRect);
+        }
+    }
+    
+    rectangle updateRect = _playerShip.updateRectFromScreenLocation(screenLocationFromMapLocation(_playerShip.getMapLocation()));
+    SDL_Rect sdlUpdateRect = {(Sint16)(updateRect.topLeft.x), (Sint16)(updateRect.topLeft.y),
+        (Uint16)(updateRect.bottomRight.x - updateRect.topLeft.x),
+        (Uint16)(updateRect.bottomRight.y - updateRect.topLeft.y)};
+    SDL_FillRect(SDL_GetVideoSurface(), &sdlUpdateRect, 0);
+//    drawRect(_screen, updateRect);
     
     for (i = bodies.begin(); i != bodies.end(); i++)
     {
@@ -149,6 +176,8 @@ void Game::mainLoop()
 {
     while (!_finished)
     {
+        _timer.start();
+        
         while (SDL_PollEvent(&_keyevent))
         {
             switch (_keyevent.type) {
@@ -194,5 +223,14 @@ void Game::mainLoop()
         
         update();
         drawScene();
+        
+        _frame++;
+        
+//        printf("Framerate: %i\n", (1000 / _timer.get_ticks()));
+        
+        if (CAP_FRAME_RATE && (_timer.get_ticks() < 1000 / FRAMES_PER_SECOND))
+        {
+            SDL_Delay((1000 / FRAMES_PER_SECOND) - _timer.get_ticks());
+        }
     }
 }

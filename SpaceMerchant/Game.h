@@ -10,8 +10,10 @@
 #define SpaceMerchant_Game_h
 
 #include <SDL/SDL.h>
+#include <time.h>
 #include "PlayerShip.h"
 #include "Map.h"
+#include "Timer.h"
 
 class Game {
     SDL_Surface *_screen;
@@ -24,7 +26,8 @@ class Game {
     
     double _zoomLevel;
     bool _finished;
-    
+    int _frame;
+    Timer _timer;
     
 public:
     Game(SDL_Surface *screen, vector2d startCoordinate);

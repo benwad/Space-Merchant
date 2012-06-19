@@ -16,6 +16,9 @@
 
 using namespace std;
 
+static Uint32 white = 0xFFFFFF00;
+static Uint32 red = 0x0000FF00;
+
 void PutPixel32_nolock(SDL_Surface * surface, int x, int y, Uint32 color)
 {
     if ((x > 0) && (x < SCREEN_SIZE_X))
@@ -32,7 +35,18 @@ void PutPixel32_nolock(SDL_Surface * surface, int x, int y, Uint32 color)
 void drawPixel(SDL_Surface *screen, int x, int y, pixelcolor pColor)
 {
     Uint32 color;
-    color = SDL_MapRGB(screen->format, pColor.r, pColor.g, pColor.b);
+    
+    if ((pColor.r == 255) && (pColor.g == 255) && (pColor.b == 255))
+    {
+        color = white;
+    }
+    else if ((pColor.r == 255) && (pColor.g == 0) && (pColor.b == 0))
+    {
+        color = red;
+    }
+    else {
+        color = SDL_MapRGB(screen->format, pColor.r, pColor.g, pColor.b);
+    }
     
     PutPixel32_nolock(screen, x, y, color);
 }
@@ -50,6 +64,8 @@ void drawLine(SDL_Surface *screen, vector2 start, vector2 end, pixelcolor pColor
     
     for (int i=0; i < thickness; i++)
     {
+        drawLine(screen, lineStart, lineEnd, pColor);
+        
         if (pColor.r > 0)
             pColor.r -= 30;
         if (pColor.g > 0)
@@ -57,7 +73,6 @@ void drawLine(SDL_Surface *screen, vector2 start, vector2 end, pixelcolor pColor
         if (pColor.b > 0)
             pColor.b -= 30;
         
-        drawLine(screen, lineStart, lineEnd, pColor);
         
         lineStart.x += 1;
         lineEnd.x += 1;

@@ -42,7 +42,7 @@ void PlayerShip::updateLocation()
     _speedx += _thrust * sin(_angle);
     _speedy += -(_thrust * cos(_angle));
     
-    printf("Speed: (%.2f, %.2f)\n", _speedx, _speedy);
+//    printf("Speed: (%.2f, %.2f)\n", _speedx, _speedy);
     
     if (abs(_speedx) > _maxspeedx)
     {
@@ -112,15 +112,69 @@ vector2 PlayerShip::getScreenLocation()
     return screenLocation;
 }
 
-//void PlayerShip::applyGravity(double gravity, vector2d origin)
-//{
-//    double gravityAngle;
-//    
-//    
-//    
-//    _speedx += gravity * sin(gravityAngle);
-//    _speedy += -(gravity * cos(gravityAngle));
-//}
+rectangle PlayerShip::updateRectFromScreenLocation(vector2 screenLocation)
+{
+    vector2 topLeft;
+    topLeft.x = screenLocation.x - 135;
+    topLeft.y = screenLocation.y - 135;
+    
+    vector2 bottomRight;
+    bottomRight.x = screenLocation.x + 135;
+    bottomRight.y = screenLocation.y + 135;
+    
+    rectangle updateRect;
+    updateRect.topLeft = topLeft;
+    updateRect.bottomRight = bottomRight;
+    
+    return updateRect;
+}
+
+void PlayerShip::applyGravity(double gravity, vector2d origin, double radius)
+{
+    double dx = _location.x - origin.x;
+    double dy = _location.y - origin.y;
+    
+    double squareDistance = dx*dx + dy*dy;
+//    printf("SqDistance: %.2f\n", squareDistance - (radius * radius));
+    
+    if ((squareDistance < radius*radius * 4.0) && (squareDistance > radius*radius))
+    {
+        double gravityAngle = atan(fabs(dx) / fabs(dy));
+        
+        if (_location.y > origin.y)
+        {
+            // below origin
+            if (_location.x > origin.x)
+            {
+                // to the right of origin
+                _speedx -= gravity * sin(gravityAngle);
+                _speedy -= gravity * cos(gravityAngle);
+            }
+            else {
+                // to the left of origin
+                _speedx += gravity * sin(gravityAngle);
+                _speedy -= gravity * cos(gravityAngle);
+            }
+        }
+        else {
+            // above origin
+            
+            if (_location.x > origin.x)
+            {
+                // to the right of origin
+                _speedx -= gravity * sin(gravityAngle);
+                _speedy += gravity * cos(gravityAngle);
+            }
+            else {
+                // to the left of origin
+                _speedx += gravity * sin(gravityAngle);
+                _speedy += gravity * cos(gravityAngle);
+            }
+        }
+        printf("Angle = %.2f\n", gravityAngle);
+        printf("dSpeed = (%.2f, %.2f)\n", gravity * sin(gravityAngle), gravity * cos(gravityAngle));
+    }
+}
 
 // Drawable methods
 

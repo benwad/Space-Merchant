@@ -18,9 +18,11 @@ class Planet : public Drawable {
     
 public:
     Planet(double radius, vector2d mapLocation);
-    void draw(SDL_Surface *screen, vector2 center, double zoomLevel);
     vector2d getMapLocation();
     double getRadius();
+    
+    void draw(SDL_Surface *screen, vector2 center, double zoomLevel);
+    rectangle updateRectFromScreenLocation(vector2 screenLocation);
 };
 
 #endif

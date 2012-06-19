@@ -17,6 +17,7 @@ class Drawable
 public:
     virtual void draw(SDL_Surface *screen, vector2 center, double zoomLevel) = 0;
     virtual vector2d getMapLocation() = 0;
+    virtual rectangle updateRectFromScreenLocation(vector2 screenLocation) = 0;
 };
 
 #endif

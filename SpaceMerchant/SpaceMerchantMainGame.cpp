@@ -16,7 +16,9 @@ int main( int argc, char* args[] )
 {
     SDL_Surface* screen = NULL;
     SDL_Init( SDL_INIT_EVERYTHING );
-    screen = SDL_SetVideoMode( SCREEN_SIZE_X, SCREEN_SIZE_Y, 32, SDL_SWSURFACE );
+    if (FULL_SCREEN)
+        screen = SDL_SetVideoMode( SCREEN_SIZE_X, SCREEN_SIZE_Y, 32, (SDL_HWSURFACE | SDL_FULLSCREEN) );
+    else screen = SDL_SetVideoMode( SCREEN_SIZE_X, SCREEN_SIZE_Y, 32, SDL_HWSURFACE );
     
     vector2d startCoordinate;
     startCoordinate.x = 5000;
