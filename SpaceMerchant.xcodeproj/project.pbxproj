@@ -1,0 +1,399 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C0EA5FA8158F71F400D9EB9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FA7158F71F400D9EB9F /* Foundation.framework */; };
+		C0EA5FAA158F71F400D9EB9F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FA9158F71F400D9EB9F /* Cocoa.framework */; };
+		C0EA5FB0158F71F400D9EB9F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0EA5FAE158F71F400D9EB9F /* InfoPlist.strings */; };
+		C0EA5FB2158F71F400D9EB9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EA5FB1158F71F400D9EB9F /* main.m */; };
+		C0EA5FB6158F71F400D9EB9F /* SDL.framework in Resources */ = {isa = PBXBuildFile; fileRef = C0EA5FB5158F71F400D9EB9F /* SDL.framework */; };
+		C0EA5FBC158F71F400D9EB9F /* SpaceMerchantMainGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0EA5FBB158F71F400D9EB9F /* SpaceMerchantMainGame.cpp */; };
+		C0EA5FBE158F71F400D9EB9F /* SDL_image.framework in Resources */ = {isa = PBXBuildFile; fileRef = C0EA5FBD158F71F400D9EB9F /* SDL_image.framework */; };
+		C0EA5FC0158F71F400D9EB9F /* SDL_mixer.framework in Resources */ = {isa = PBXBuildFile; fileRef = C0EA5FBF158F71F400D9EB9F /* SDL_mixer.framework */; };
+		C0EA5FC2158F71F400D9EB9F /* SDL_ttf.framework in Resources */ = {isa = PBXBuildFile; fileRef = C0EA5FC1158F71F400D9EB9F /* SDL_ttf.framework */; };
+		C0EA5FD4158F727300D9EB9F /* SDL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0EA5FB5158F71F400D9EB9F /* SDL.framework */; };
+		C0EA5FD5158F727700D9EB9F /* SDL_image.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0EA5FBD158F71F400D9EB9F /* SDL_image.framework */; };
+		C0EA5FD6158F727900D9EB9F /* SDL_mixer.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0EA5FBF158F71F400D9EB9F /* SDL_mixer.framework */; };
+		C0EA5FD7158F727B00D9EB9F /* SDL_ttf.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0EA5FC1158F71F400D9EB9F /* SDL_ttf.framework */; };
+		C0EA5FE8158F740000D9EB9F /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FE4158F740000D9EB9F /* SDL.framework */; };
+		C0EA5FE9158F740000D9EB9F /* SDL_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FE5158F740000D9EB9F /* SDL_image.framework */; };
+		C0EA5FEA158F740000D9EB9F /* SDL_mixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FE6158F740000D9EB9F /* SDL_mixer.framework */; };
+		C0EA5FEB158F740000D9EB9F /* SDL_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FE7158F740000D9EB9F /* SDL_ttf.framework */; };
+		C0EA5FEE158F744400D9EB9F /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EA5FED158F744400D9EB9F /* SDLMain.m */; };
+		C0EA5FF4158F788500D9EB9F /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C0EA5FF3158F788500D9EB9F /* libstdc++.6.0.9.dylib */; };
+		C0FB1F87158FBC2600827D29 /* drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F7E158FBC2600827D29 /* drawing.cpp */; };
+		C0FB1F88158FBC2600827D29 /* geometry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F80158FBC2600827D29 /* geometry.cpp */; };
+		C0FB1F89158FBC2600827D29 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F81158FBC2600827D29 /* Map.cpp */; };
+		C0FB1F8A158FBC2600827D29 /* Planet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F83158FBC2600827D29 /* Planet.cpp */; };
+		C0FB1F8B158FBC2600827D29 /* PlayerShip.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F85158FBC2600827D29 /* PlayerShip.cpp */; };
+		C0FB1F8F158FBCC300827D29 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0FB1F8E158FBCC300827D29 /* Game.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0EA5FA1158F71F400D9EB9F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0EA5FD4158F727300D9EB9F /* SDL.framework in CopyFiles */,
+				C0EA5FD5158F727700D9EB9F /* SDL_image.framework in CopyFiles */,
+				C0EA5FD6158F727900D9EB9F /* SDL_mixer.framework in CopyFiles */,
+				C0EA5FD7158F727B00D9EB9F /* SDL_ttf.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C0EA5FA3158F71F400D9EB9F /* SpaceMerchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceMerchant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0EA5FA7158F71F400D9EB9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C0EA5FA9158F71F400D9EB9F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C0EA5FAD158F71F400D9EB9F /* SpaceMerchant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceMerchant-Info.plist"; sourceTree = "<group>"; };
+		C0EA5FAF158F71F400D9EB9F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C0EA5FB1158F71F400D9EB9F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C0EA5FB3158F71F400D9EB9F /* SpaceMerchant-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpaceMerchant-Prefix.pch"; sourceTree = "<group>"; };
+		C0EA5FB5158F71F400D9EB9F /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDL.framework; sourceTree = "<group>"; };
+		C0EA5FBA158F71F400D9EB9F /* SpaceMerchantMainGame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceMerchantMainGame.h; sourceTree = "<group>"; };
+		C0EA5FBB158F71F400D9EB9F /* SpaceMerchantMainGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpaceMerchantMainGame.cpp; sourceTree = "<group>"; };
+		C0EA5FBD158F71F400D9EB9F /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDL_image.framework; sourceTree = "<group>"; };
+		C0EA5FBF158F71F400D9EB9F /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDL_mixer.framework; sourceTree = "<group>"; };
+		C0EA5FC1158F71F400D9EB9F /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDL_ttf.framework; sourceTree = "<group>"; };
+		C0EA5FE4158F740000D9EB9F /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Library/Frameworks/SDL.framework; sourceTree = SDKROOT; };
+		C0EA5FE5158F740000D9EB9F /* SDL_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_image.framework; path = Library/Frameworks/SDL_image.framework; sourceTree = SDKROOT; };
+		C0EA5FE6158F740000D9EB9F /* SDL_mixer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_mixer.framework; path = Library/Frameworks/SDL_mixer.framework; sourceTree = SDKROOT; };
+		C0EA5FE7158F740000D9EB9F /* SDL_ttf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL_ttf.framework; path = Library/Frameworks/SDL_ttf.framework; sourceTree = SDKROOT; };
+		C0EA5FEC158F744400D9EB9F /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = "<group>"; };
+		C0EA5FED158F744400D9EB9F /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = "<group>"; };
+		C0EA5FF2158F755500D9EB9F /* geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = geometry.h; sourceTree = "<group>"; };
+		C0EA5FF3158F788500D9EB9F /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		C0EA5FF7158F7D3F00D9EB9F /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		C0FB1F7D158FBC2600827D29 /* Drawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawable.h; sourceTree = "<group>"; };
+		C0FB1F7E158FBC2600827D29 /* drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = drawing.cpp; sourceTree = "<group>"; };
+		C0FB1F7F158FBC2600827D29 /* drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drawing.h; sourceTree = "<group>"; };
+		C0FB1F80158FBC2600827D29 /* geometry.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = geometry.cpp; sourceTree = "<group>"; };
+		C0FB1F81158FBC2600827D29 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		C0FB1F82158FBC2600827D29 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		C0FB1F83158FBC2600827D29 /* Planet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Planet.cpp; sourceTree = "<group>"; };
+		C0FB1F84158FBC2600827D29 /* Planet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Planet.h; sourceTree = "<group>"; };
+		C0FB1F85158FBC2600827D29 /* PlayerShip.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerShip.cpp; sourceTree = "<group>"; };
+		C0FB1F86158FBC2600827D29 /* PlayerShip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerShip.h; sourceTree = "<group>"; };
+		C0FB1F8D158FBCBA00827D29 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		C0FB1F8E158FBCC300827D29 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C0EA5F9F158F71F400D9EB9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA5FF4158F788500D9EB9F /* libstdc++.6.0.9.dylib in Frameworks */,
+				C0EA5FE8158F740000D9EB9F /* SDL.framework in Frameworks */,
+				C0EA5FE9158F740000D9EB9F /* SDL_image.framework in Frameworks */,
+				C0EA5FEA158F740000D9EB9F /* SDL_mixer.framework in Frameworks */,
+				C0EA5FEB158F740000D9EB9F /* SDL_ttf.framework in Frameworks */,
+				C0EA5FA8158F71F400D9EB9F /* Foundation.framework in Frameworks */,
+				C0EA5FAA158F71F400D9EB9F /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C0EA5F97158F71F400D9EB9F = {
+			isa = PBXGroup;
+			children = (
+				C0EA5FF3158F788500D9EB9F /* libstdc++.6.0.9.dylib */,
+				C0EA5FE4158F740000D9EB9F /* SDL.framework */,
+				C0EA5FE5158F740000D9EB9F /* SDL_image.framework */,
+				C0EA5FE6158F740000D9EB9F /* SDL_mixer.framework */,
+				C0EA5FE7158F740000D9EB9F /* SDL_ttf.framework */,
+				C0EA5FAB158F71F400D9EB9F /* SpaceMerchant */,
+				C0EA5FA6158F71F400D9EB9F /* Frameworks */,
+				C0EA5FA4158F71F400D9EB9F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C0EA5FA4158F71F400D9EB9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA5FA3158F71F400D9EB9F /* SpaceMerchant.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0EA5FA6158F71F400D9EB9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA5FA7158F71F400D9EB9F /* Foundation.framework */,
+				C0EA5FA9158F71F400D9EB9F /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0EA5FAB158F71F400D9EB9F /* SpaceMerchant */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA5FEC158F744400D9EB9F /* SDLMain.h */,
+				C0EA5FED158F744400D9EB9F /* SDLMain.m */,
+				C0EA5FB5158F71F400D9EB9F /* SDL.framework */,
+				C0EA5FBD158F71F400D9EB9F /* SDL_image.framework */,
+				C0EA5FBF158F71F400D9EB9F /* SDL_mixer.framework */,
+				C0EA5FC1158F71F400D9EB9F /* SDL_ttf.framework */,
+				C0EA5FB9158F71F400D9EB9F /* Game */,
+				C0EA5FAC158F71F400D9EB9F /* Supporting Files */,
+			);
+			path = SpaceMerchant;
+			sourceTree = "<group>";
+		};
+		C0EA5FAC158F71F400D9EB9F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0EA5FAD158F71F400D9EB9F /* SpaceMerchant-Info.plist */,
+				C0EA5FAE158F71F400D9EB9F /* InfoPlist.strings */,
+				C0EA5FB1158F71F400D9EB9F /* main.m */,
+				C0EA5FB3158F71F400D9EB9F /* SpaceMerchant-Prefix.pch */,
+				C0EA5FF7158F7D3F00D9EB9F /* Config.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0EA5FB9158F71F400D9EB9F /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				C0FB1F7D158FBC2600827D29 /* Drawable.h */,
+				C0FB1F7F158FBC2600827D29 /* drawing.h */,
+				C0FB1F7E158FBC2600827D29 /* drawing.cpp */,
+				C0EA5FF2158F755500D9EB9F /* geometry.h */,
+				C0FB1F80158FBC2600827D29 /* geometry.cpp */,
+				C0FB1F82158FBC2600827D29 /* Map.h */,
+				C0FB1F81158FBC2600827D29 /* Map.cpp */,
+				C0FB1F84158FBC2600827D29 /* Planet.h */,
+				C0FB1F83158FBC2600827D29 /* Planet.cpp */,
+				C0FB1F86158FBC2600827D29 /* PlayerShip.h */,
+				C0FB1F85158FBC2600827D29 /* PlayerShip.cpp */,
+				C0EA5FBA158F71F400D9EB9F /* SpaceMerchantMainGame.h */,
+				C0EA5FBB158F71F400D9EB9F /* SpaceMerchantMainGame.cpp */,
+				C0FB1F8D158FBCBA00827D29 /* Game.h */,
+				C0FB1F8E158FBCC300827D29 /* Game.cpp */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C0EA5FA2158F71F400D9EB9F /* SpaceMerchant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0EA5FC5158F71F400D9EB9F /* Build configuration list for PBXNativeTarget "SpaceMerchant" */;
+			buildPhases = (
+				C0EA5F9E158F71F400D9EB9F /* Sources */,
+				C0EA5F9F158F71F400D9EB9F /* Frameworks */,
+				C0EA5FA0158F71F400D9EB9F /* Resources */,
+				C0EA5FA1158F71F400D9EB9F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceMerchant;
+			productName = SpaceMerchant;
+			productReference = C0EA5FA3158F71F400D9EB9F /* SpaceMerchant.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C0EA5F99158F71F400D9EB9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C0EA5F9C158F71F400D9EB9F /* Build configuration list for PBXProject "SpaceMerchant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C0EA5F97158F71F400D9EB9F;
+			productRefGroup = C0EA5FA4158F71F400D9EB9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0EA5FA2158F71F400D9EB9F /* SpaceMerchant */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C0EA5FA0158F71F400D9EB9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA5FB0158F71F400D9EB9F /* InfoPlist.strings in Resources */,
+				C0EA5FB6158F71F400D9EB9F /* SDL.framework in Resources */,
+				C0EA5FBE158F71F400D9EB9F /* SDL_image.framework in Resources */,
+				C0EA5FC0158F71F400D9EB9F /* SDL_mixer.framework in Resources */,
+				C0EA5FC2158F71F400D9EB9F /* SDL_ttf.framework in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C0EA5F9E158F71F400D9EB9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0EA5FB2158F71F400D9EB9F /* main.m in Sources */,
+				C0EA5FBC158F71F400D9EB9F /* SpaceMerchantMainGame.cpp in Sources */,
+				C0EA5FEE158F744400D9EB9F /* SDLMain.m in Sources */,
+				C0FB1F87158FBC2600827D29 /* drawing.cpp in Sources */,
+				C0FB1F88158FBC2600827D29 /* geometry.cpp in Sources */,
+				C0FB1F89158FBC2600827D29 /* Map.cpp in Sources */,
+				C0FB1F8A158FBC2600827D29 /* Planet.cpp in Sources */,
+				C0FB1F8B158FBC2600827D29 /* PlayerShip.cpp in Sources */,
+				C0FB1F8F158FBCC300827D29 /* Game.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C0EA5FAE158F71F400D9EB9F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0EA5FAF158F71F400D9EB9F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C0EA5FC3158F71F400D9EB9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_image.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_mixer.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_ttf.framework/Headers\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C0EA5FC4158F71F400D9EB9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"\"${SRCROOT}\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_image.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_mixer.framework/Headers\"",
+					"\"${SRCROOT}/${PROJECT_NAME}/SDL_ttf.framework/Headers\"",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C0EA5FC6158F71F400D9EB9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceMerchant/SpaceMerchant-Prefix.pch";
+				INFOPLIST_FILE = "SpaceMerchant/SpaceMerchant-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C0EA5FC7158F71F400D9EB9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceMerchant/SpaceMerchant-Prefix.pch";
+				INFOPLIST_FILE = "SpaceMerchant/SpaceMerchant-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C0EA5F9C158F71F400D9EB9F /* Build configuration list for PBXProject "SpaceMerchant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EA5FC3158F71F400D9EB9F /* Debug */,
+				C0EA5FC4158F71F400D9EB9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0EA5FC5158F71F400D9EB9F /* Build configuration list for PBXNativeTarget "SpaceMerchant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0EA5FC6158F71F400D9EB9F /* Debug */,
+				C0EA5FC7158F71F400D9EB9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C0EA5F99158F71F400D9EB9F /* Project object */;
+}
